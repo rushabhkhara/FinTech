@@ -9,9 +9,11 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { LoginsignupComponent } from './loginsignup/loginsignup.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginsignupComponent
   ],
   imports: [
     BrowserModule,

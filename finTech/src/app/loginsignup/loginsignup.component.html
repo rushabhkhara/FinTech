@@ -1,0 +1,43 @@
+<div class="container-fluid row center-content">
+  <div class="col-4"></div>
+  <div class="col-4">
+    <h3 class="card-text" style="padding-top:5px;Font-size:20px;margin-left: 20px">You are signing up for a 14-day free trial of Oppex Professional.</h3>
+    <br>
+    <h3 class="card-text" style="padding-top:5px;Font-size:20px;margin-left: 20px;text-decoration: underline"><a href="/NO" style="color: white">See different plans and pricing options.</a></h3>
+    <br>
+    <form [formGroup]="signupForm" >
+      <div class="form-group">
+
+        <input formControlName="email" type="email" class="form-control" placeholder="Company Email" name="email"
+               required email>
+
+        <!--<div *ngIf="f.submitted && email.invalid" class="invalid-feedback">-->
+        <!--<div *ngIf="email.errors.required" class="invalid-form-input">Email is required</div>-->
+        <!--<div *ngIf="email.errors.email" class="invalid-form-input">Email must be a valid email address</div>-->
+        <!--</div>-->
+        <br>
+        <!--<input type="text" class="form-control" placeholder="Password">-->
+        <input formControlName="password" type="password" class="form-control" placeholder="Password" name="password"
+        />
+
+        <!--<div *ngIf="f.submitted && password.invalid" class="invalid-feedback">-->
+        <!--<div *ngIf="password.errors.required" class="invalid-form-input">Password is required</div>-->
+        <!--<div *ngIf="password.errors.minlength" class="invalid-form-input">Password must be at least 6 characters</div>-->
+        <!--</div>-->
+        <label class="error">{{errorMessage}}</label>
+        <h1 class="success">{{successMessage}}</h1>
+        <br>
+        <button type="submit" (click)="tryRegister(registerForm.value)" class="btn btn-primary">Get Started!</button>
+        <br>
+        <br>
+        <button style="margin-right: 10px" type="button" (click)="tryGoogleLogin()" class="btn btn-success">SignUp With Google</button>
+
+        <button style="margin-left: 10px" type="button" class="btn btn-primary" (click)="tryFacebookLogin()">Register with Facebook</button>
+        <br>
+
+      </div>
+    </form>
+  </div>
+  <div class="col-4"></div>
+</div>
+
